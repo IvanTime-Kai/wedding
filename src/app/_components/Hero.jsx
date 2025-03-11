@@ -10,6 +10,7 @@ export function Hero() {
         fill
         className="object-cover brightness-75"
         priority
+        loading="eager"
       />
       <div className="absolute inset-0 flex flex-col gap-7 items-center justify-center text-center text-white">
         <div className="border-[1.4px] border-white rounded-sm px-8 py-1">
