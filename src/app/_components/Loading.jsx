@@ -65,7 +65,7 @@ export default function Loading({ onFinish }) {
         </div>
       ))}
 
-      <div className="relative w-32 h-full mb-8 animate-gentle-shake">
+      <div className="relative w-32 h-32 mb-8 animate-gentle-shake">
         <Image
           src="/tandh.svg"
           alt="Truong & Hien"
@@ -81,7 +81,7 @@ export default function Loading({ onFinish }) {
           Truong & Hien
         </h1>
         <p className="font-montserrat text-[#8a6d55] text-sm">
-          We're excited to celebrate with you
+          We&apos;re excited to celebrate with you
         </p>
       </div>
 

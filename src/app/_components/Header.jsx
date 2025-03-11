@@ -29,15 +29,16 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#FBF8EF]">
       <div className="container mx-auto px-4 h-[100px]">
-        <nav className="flex w-32 justify-between items-center h-full">
+        <nav className="flex justify-between items-center h-full">
           <Image
             src="/tandh.svg"
             alt="Truong & Hien Wedding"
-            fill
+            width={128}
+            height={32}
             priority
             loading="eager"
           />
-          <div className="space-x-8">
+          <div className="space-x-10">
             <a
               href="#detail"
               onClick={(e) => handleNavClick(e, "detail")}
