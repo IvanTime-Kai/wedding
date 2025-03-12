@@ -15,9 +15,7 @@ export const dynamic = "force-static";
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
-  return isLoading ? (
-    <Loading onFinish={() => setIsLoading(false)} />
-  ) : (
+  return (
     <main className="min-h-screen">
       <Header />
       <Hero />

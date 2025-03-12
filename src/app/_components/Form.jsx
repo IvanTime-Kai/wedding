@@ -5,7 +5,7 @@ import { useState } from "react";
 import FadeInSection from "./FadeInSection";
 
 const url =
-  "https://script.google.com/macros/s/AKfycbyyu-OUOSRIJHHku1dDzc2bVG6pIDn5y_9zWxSTUGLspSqHkpY_-5Gx4mJz2FyrA7iKwA/exec";
+  "https://script.google.com/macros/s/AKfycbyEuM4t_4H7EaZ3Xef0QH_K7__-GePFHTINVr4AaPCDk27opPZK0-5f11RoCiWKpZNA7Q/exec";
 
 export function Form() {
   const [formData, setFormData] = useState({
@@ -95,26 +95,33 @@ export function Form() {
     fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: `Name=${formData.fullName}&Email=${formData.email}&Amount=${formData.amount}&Message=${formData.message}&Attend=${formData.attending}`,
+      body: `Name=${encodeURIComponent(formData.fullName)}&Email=${encodeURIComponent(formData.email)}&Amount=${encodeURIComponent(formData.amount)}&Message=${encodeURIComponent(formData.message)}&Attend=${encodeURIComponent(formData.attending)}`,
     })
       .then((res) => res.text())
       .then(() => {
         setIsLoading(false);
         setSubmitted(true);
+        // Reset form data
+        setFormData({
+          attending: "yes",
+          fullName: "",
+          email: "",
+          amount: "",
+          message: "",
+        });
       })
       .catch(() => {
         setIsLoading(false);
+        // Reset form data
+        setFormData({
+          attending: "yes",
+          fullName: "",
+          email: "",
+          amount: "",
+          message: "",
+        });
         alert("There was an error submitting your RSVP. Please try again.");
       });
-
-    // Reset form data
-    setFormData({
-      attending: "yes",
-      fullName: "",
-      email: "",
-      amount: "",
-      message: "",
-    });
   };
 
   return (
@@ -276,7 +283,6 @@ export function Form() {
                       value={formData.amount}
                       onChange={handleChange}
                       onBlur={handleBlur}
-                      type="number"
                       className="w-full border-b font-montserrat border-brown-800 bg-transparent py-2 focus:outline-none text-brown-800"
                     />
                   </div>
