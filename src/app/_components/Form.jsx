@@ -95,7 +95,7 @@ export function Form() {
     fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: `Name=${formData.fullName}&Email=${formData.email}&PlusOne=${formData.plusOne}&Message=${formData.message}&Attend=${formData.attending}`,
+      body: `Name=${formData.fullName}&Email=${formData.email}&Amount=${formData.amount}&Message=${formData.message}&Attend=${formData.attending}`,
     })
       .then((res) => res.text())
       .then(() => {
