@@ -3,7 +3,6 @@
 import Image from "next/image";
 import React from "react";
 import FadeInSection from "./FadeInSection";
-import Link from "next/link";
 
 const Invitation = () => {
   return (
