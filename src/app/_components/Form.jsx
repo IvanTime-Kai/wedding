@@ -283,6 +283,7 @@ export function Form() {
                       value={formData.amount}
                       onChange={handleChange}
                       onBlur={handleBlur}
+                      type="number"
                       className="w-full border-b font-montserrat border-brown-800 bg-transparent py-2 focus:outline-none text-brown-800"
                     />
                   </div>
