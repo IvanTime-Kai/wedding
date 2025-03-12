@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import FadeInSection from "./FadeInSection";
+import Link from "next/link";
 
 const Invitation = () => {
   return (
@@ -11,7 +12,7 @@ const Invitation = () => {
         <div className="container mx-auto px-4 text-center ">
           <div className="flex flex-col gap-6 items-center">
             <div className="border-[1.4px] border-brown-800 rounded-sm px-5 py-1 w-fit ">
-              <p className="font-montserrat text-base font-light text-brown-800 leading-5">
+              <p className="font-montserrat text-base font-semibold text-brown-800 leading-5">
                 Celebrate Love With Us
               </p>
             </div>
@@ -20,7 +21,7 @@ const Invitation = () => {
               <br />
               OF OUR LOVE STORY.
             </h2>
-            <p className="font-montserrat text-brown-600 max-w-2xl mx-auto">
+            <p className="font-montserrat text-brown-600 max-w-2xl mx-auto font-normal">
               Come join us for a magical day of love and celebration, as we are
               delighted to invite you to our wedding on April 25, 2025 - a
               moment of joy we want to share with you.
@@ -34,34 +35,43 @@ const Invitation = () => {
                   height={20}
                   loading="lazy"
                 />
-                <p className="font-montserrat text-base font-light text-brown-800 leading-5">
+                <p className="font-montserrat text-base font-medium text-brown-800 leading-5">
                   25 May, 2025 at 6 PM
                 </p>
               </div>
-              <div className="border-[1.4px] border-brown-800 rounded-sm px-5 py-2 w-fit flex flex-row gap-2 items-center ">
-                <Image
-                  src="/location.svg"
-                  alt="Location"
-                  width={20}
-                  height={20}
-                  loading="lazy"
-                />
-                <p className="font-montserrat text-base font-light text-brown-800 leading-5">
-                  Canton House Restaurant
-                </p>
-              </div>
+              <a
+                href="https://maps.app.goo.gl/s9xgztZ8ihVc8MKv8"
+                target="_blank"
+              >
+                <div className="border-[1.4px] border-brown-800 rounded-sm px-5 py-2 w-fit flex flex-row gap-2 items-center ">
+                  <Image
+                    src="/location.svg"
+                    alt="Location"
+                    width={20}
+                    height={20}
+                    loading="lazy"
+                  />
+                  <p className="font-montserrat text-base font-medium text-brown-800 leading-5">
+                    Canton House Restaurant
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto w-full mt-[60px]">
-            {[1, 2, 3].map((i) => (
+            {[
+              "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747740/wedding-1_mqzpk8.png",
+              "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747740/wedding-2_j4vjko.png",
+              "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747740/wedding-3_zwj5y8.png",
+            ].map((image, index) => (
               <div
-                key={i}
+                key={index}
                 className="aspect-[3/4] relative overflow-hidden rounded-lg cursor-pointer"
               >
                 <Image
-                  src={`/wedding-${i}.png`}
-                  alt="Wedding moments"
+                  src={image}
+                  alt={`Wedding Image ${index + 1}`}
                   fill
                   className="object-cover hover:scale-110 transition-transform duration-500"
                   loading="lazy"

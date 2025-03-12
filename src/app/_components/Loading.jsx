@@ -52,7 +52,7 @@ export default function Loading({ onFinish }) {
       {hearts.map((heart) => (
         <div
           key={heart.id}
-          className="absolute text-[#8a6d55] opacity-20 animate-float-heart"
+          className="absolute text-brown-800 opacity-20 animate-float-heart"
           style={{
             left: `${heart.x}%`,
             top: `${heart.y}%`,
@@ -77,10 +77,10 @@ export default function Loading({ onFinish }) {
 
       {/* Lời chào */}
       <div className="text-center mb-8 relative z-10">
-        <h1 className="font-playfair text-[#8a6d55] text-3xl mb-2">
+        <h1 className="font-bodoni font-bold text-[40px] leading-[48px] text-brown-800 text-3xl mb-2">
           Truong & Hien
         </h1>
-        <p className="font-montserrat text-[#8a6d55] text-sm">
+        <p className="font-montserrat text-brown-800 text-sm">
           We&apos;re excited to celebrate with you
         </p>
       </div>
@@ -88,11 +88,11 @@ export default function Loading({ onFinish }) {
       {/* Thanh Loading */}
       <div className="relative w-40 h-1 bg-[#e9e2d8] rounded-full z-10">
         <div
-          className="absolute top-0 left-0 h-full bg-[#8a6d55] rounded-full transition-all ease-linear"
+          className="absolute top-0 left-0 h-full bg-brown-800 rounded-full transition-all ease-linear"
           style={{ width: `${progress}%` }}
         ></div>
       </div>
-      <p className="font-montserrat text-[#8a6d55] text-xs mt-2 animate-pulse z-10">
+      <p className="font-montserrat text-brown-800 text-xs mt-2 animate-pulse z-10">
         {progress < 30
           ? "Gathering memories..."
           : progress < 60

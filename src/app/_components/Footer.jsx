@@ -6,9 +6,9 @@ export function Footer() {
           TRUONG & HIEN
         </h2>
         <p className="font-beloved text-[48px] font-normal leading-[80px] text-brown-800">
-          Thank you for being a part of our love story
+          Thank you form the bottom of our hearts
         </p>
-        <p className="font-montserrat text-sm  text-brown-800">
+        <p className="font-montserrat font-normal text-sm  text-brown-800">
           For any questions or concerns, please reach out to us through our
           email <br />
           thuhien.tang@icloud.com

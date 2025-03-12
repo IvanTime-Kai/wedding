@@ -6,10 +6,26 @@ import { ImageLightbox } from "./ImageLightBox";
 import useEmblaCarousel from "embla-carousel-react";
 import FadeInSection from "./FadeInSection";
 
-const galleryImages = Array.from({ length: 12 }, (_, i) => ({
-  src: `/${i + 1}.png`,
-  alt: `Gallery Image ${i + 1}`,
-}));
+const galleryImages = [
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741757231/18_tkyzj0.png",
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741757231/17_qa7mrh.png",
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741757231/14_fpihj5.png",
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741757231/16_koozgt.png",
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741757231/15_ptqwoc.png",
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741757231/13_ngkyrw.png",
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747756/6_sgx5ai.png",
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747755/5_mzw19q.png",
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747754/1_avasqa.png",
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747755/4_vbwrvc.png",
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747755/3_oc3gqg.png",
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747754/2_u6u27v.png",
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747756/12_vsdqdz.png",
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747756/11_qfrr7k.png",
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747756/7_kzbv4t.png",
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747756/10_btwhj8.png",
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747756/9_fmc3iw.png",
+  "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747756/8_z30cv2.png",
+];
 
 export function Gallery() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -50,10 +66,20 @@ export function Gallery() {
     [emblaApi],
   );
 
+  const autoplay = useCallback(() => {
+    if (!emblaApi) return;
+    emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  useEffect(() => {
+    const interval = setInterval(autoplay, 2000);
+    return () => clearInterval(interval);
+  }, [autoplay]);
+
   return (
     <section id="gallery" className="relative min-h-screen py-20">
       <Image
-        src="/bg-gallery.png"
+        src="https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747757/bg-gallery_uqth9i.png"
         alt="Truong and Hien Wedding"
         fill
         className="object-fill"
@@ -62,11 +88,11 @@ export function Gallery() {
 
       <div className="absolute inset-0 flex flex-col gap-7 items-center justify-center text-center text-white ">
         <FadeInSection>
-          <div className="container mx-auto px-4 flex flex-col items-center gap-[60px]">
+          <div className="container mx-auto px-4 flex flex-col items-center gap-10">
             <div className="text-center flex flex-col gap-7 items-center">
               <div className="border-[1.4px] border-brown-800 rounded-sm px-5 py-[3px] w-fit ">
-                <p className="font-montserrat text-base font-light text-brown-800 leading-5">
-                  Celebrate Love With Us
+                <p className="font-montserrat text-base font-semibold text-brown-800 leading-5">
+                  Our Precious Moments
                 </p>
               </div>
               <h2 className="font-bodoni text-[40px] leading-[48px] font-bold text-brown-800 ">
@@ -74,7 +100,7 @@ export function Gallery() {
                 <br />
                 of Our Journey
               </h2>
-              <p className="font-montserrat text-brown-800 mx-auto text-base font-light leading-[20px]">
+              <p className="font-montserrat text-brown-800 mx-auto text-base font-normal leading-[20px]">
                 Discover the cherished memories and highlights from our
                 unforgettable moments together.
               </p>
@@ -100,8 +126,8 @@ export function Gallery() {
                                 }
                               >
                                 <Image
-                                  src={image.src || "/placeholder.svg"}
-                                  alt={image.alt}
+                                  src={image || "/placeholder.svg"}
+                                  alt={`Image ${imgIndex + 1}`}
                                   fill
                                   className="object-cover transition-transform duration-500 hover:scale-110"
                                   loading="lazy"

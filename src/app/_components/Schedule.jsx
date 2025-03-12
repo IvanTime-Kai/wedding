@@ -3,22 +3,22 @@ import FadeInSection from "./FadeInSection";
 
 const scheduleItems = [
   {
-    time: "3:00 PM",
+    time: "6:00 PM",
     title: "Welcome",
     src: "/icon-1.svg",
   },
   {
-    time: "3:30 PM",
+    time: "6:30 PM",
     title: "Ceremony",
     src: "/icon-2.svg",
   },
   {
-    time: "5:00 PM",
+    time: "7:00 PM",
     title: "Dinner",
     src: "/icon-3.svg",
   },
   {
-    time: "7:00 PM",
+    time: "8:00 PM",
     title: "Party",
     src: "/icon-4.svg",
   },
@@ -32,7 +32,7 @@ export function Schedule() {
           <div className="flex flex-col gap-[60px] items-center col-span-8">
             <div className="flex flex-col items-center justify-center gap-7">
               <div className="border-[1.4px] border-brown-800 rounded-sm px-5 py-[3px] w-fit ">
-                <p className="font-montserrat text-base font-light text-brown-800 leading-5">
+                <p className="font-montserrat text-base font-semibold text-brown-800 leading-5">
                   Wedding Details
                 </p>
               </div>
@@ -52,10 +52,10 @@ export function Schedule() {
                         loading="lazy"
                       />
                     </div>
-                    <div className="font-playfair text-xl text-brown-800 leading-5 mb-2">
+                    <div className="font-bodoni font-bold text-xl text-brown-800 leading-5 mb-2">
                       {item.time}
                     </div>
-                    <div className="font-montserrat text-brown-600 leading-5">
+                    <div className="font-montserrat font-normal text-brown-600 leading-5">
                       {item.title}
                     </div>
                   </div>
@@ -66,7 +66,7 @@ export function Schedule() {
               <h2 className="text-center font-bodoni text-[40px] font-bold text-brown-800 leading-[48px]">
                 Dresscode
               </h2>
-              <p className="font-montserrat text-brown-600 max-w-2xl text-base font-light mx-auto text-center">
+              <p className="font-montserrat text-brown-800 max-w-2xl text-base font-normal mx-auto text-center">
                 We kindly encourage our guests to wear these colours on our
                 special day. The dress code is formal, and we kindly request
                 guests refrain from wearing white. Your presence in beautiful
@@ -80,7 +80,7 @@ export function Schedule() {
           </div>
           <div className="aspect-[3/4] col-span-4 max-w-[388px] relative overflow-hidden rounded-lg cursor-pointer">
             <Image
-              src="/wedding-4.png"
+              src="https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747755/4_vbwrvc.png"
               alt="Wedding moments"
               fill
               className="object-cover hover:scale-110 transition-transform duration-500"

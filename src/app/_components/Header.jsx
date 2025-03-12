@@ -42,7 +42,7 @@ const Header = () => {
             <a
               href="#detail"
               onClick={(e) => handleNavClick(e, "detail")}
-              className="text-brown-800 font-montserrat font-extralight text-xl relative group"
+              className="text-brown-800 font-montserrat font-normal text-xl relative group"
             >
               Detail
               <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-brown-800 transition-all duration-300 group-hover:w-full"></span>
@@ -50,7 +50,7 @@ const Header = () => {
             <a
               href="#gallery"
               onClick={(e) => handleNavClick(e, "gallery")}
-              className="text-brown-800 font-montserrat font-extralight text-xl relative group"
+              className="text-brown-800 font-montserrat font-normal text-xl relative group"
             >
               Gallery
               <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-brown-800 transition-all duration-300 group-hover:w-full"></span>
@@ -58,7 +58,7 @@ const Header = () => {
             <a
               href="#rsvp"
               onClick={(e) => handleNavClick(e, "rsvp")}
-              className="text-brown-800 font-montserrat font-extralight text-xl relative group"
+              className="text-brown-800 font-montserrat font-normal text-xl relative group"
             >
               RSVP
               <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-brown-800 transition-all duration-300 group-hover:w-full"></span>

@@ -94,8 +94,8 @@ export function ImageLightbox({
           }`}
         >
           <Image
-            src={images[currentIndex].src || "/placeholder.svg"}
-            alt={images[currentIndex].alt}
+            src={images[currentIndex] || "/placeholder.svg"}
+            alt={images[currentIndex]}
             fill
             className="object-contain"
             onLoad={() => setLoaded(true)}

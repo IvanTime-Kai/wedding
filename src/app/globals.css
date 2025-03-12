@@ -2,22 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes gentleShake {
-  0%,
-  100% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(10deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-10deg);
-  }
-}
-
 @keyframes floatHeart {
   0% {
     transform: translateY(0) scale(var(--scale, 1)) rotate(0deg);
@@ -42,9 +26,6 @@
 }
 
 @layer utilities {
-  .animate-gentle-shake {
-    animation: gentleShake 3s ease-in-out infinite;
-  }
 
   .animate-float-heart {
     animation: floatHeart 6s ease-in-out infinite;
