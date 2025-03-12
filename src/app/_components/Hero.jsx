@@ -10,7 +10,7 @@ export function Hero() {
       }}
     >
       <Image
-        src="https://res.cloudinary.com/dhjjtwvws/image/upload/v1741746387/bg-hero_srbxfv.png"
+        src="https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747757/bg-hero_qjjo70.png"
         alt="Truong and Hien Wedding"
         fill
         className="object-cover"
