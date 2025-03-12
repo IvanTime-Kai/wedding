@@ -16,7 +16,6 @@ export function Form() {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
   const [errors, setErrors] = useState({ fullName: "", email: "" });
   const [touched, setTouched] = useState({ fullName: false, email: false });
   const [isLoading, setIsLoading] = useState(false);
@@ -93,13 +92,13 @@ export function Form() {
     setIsLoading(true);
 
     // Prepare data for submission
-    const data = fetch(url, {
+    fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: `Name=${formData.fullName}&Email=${formData.email}&PlusOne=${formData.plusOne}&Message=${formData.message}&Attend=${formData.attending}`,
     })
       .then((res) => res.text())
-      .then((data) => {
+      .then(() => {
         setIsLoading(false);
         setSubmitted(true);
       })
