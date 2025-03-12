@@ -120,7 +120,7 @@ export function Gallery() {
                             .map((image, imgIndex) => (
                               <div
                                 key={imgIndex}
-                                className="relative aspect-[3/2] overflow-hidden rounded-md cursor-pointer"
+                                className="relative aspect-[3/2] overflow-hidden cursor-pointer"
                                 onClick={() =>
                                   openLightbox(index * 6 + imgIndex)
                                 }

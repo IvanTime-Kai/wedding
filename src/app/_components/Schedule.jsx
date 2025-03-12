@@ -78,7 +78,7 @@ export function Schedule() {
               </div>
             </div>
           </div>
-          <div className="aspect-[3/4] col-span-4 max-w-[388px] relative overflow-hidden rounded-lg cursor-pointer">
+          <div className="aspect-[3/4] col-span-4 max-w-[388px] relative overflow-hidden cursor-pointer">
             <Image
               src="https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747755/4_vbwrvc.png"
               alt="Wedding moments"

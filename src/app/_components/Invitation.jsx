@@ -66,7 +66,7 @@ const Invitation = () => {
             ].map((image, index) => (
               <div
                 key={index}
-                className="aspect-[3/4] relative overflow-hidden rounded-lg cursor-pointer"
+                className="aspect-[3/4] relative overflow-hidden cursor-pointer"
               >
                 <Image
                   src={image}
