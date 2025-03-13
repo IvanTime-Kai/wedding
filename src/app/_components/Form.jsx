@@ -236,7 +236,7 @@ export function Form() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       required
-                      className="w-full border-b font-montserrat border-brown-800 text-sm md:text-base bg-transparent py-2 focus:outline-none text-brown-800"
+                      className="w-full border-b rounded-none font-montserrat border-brown-800 text-sm md:text-base bg-transparent py-2 focus:outline-none text-brown-800"
                     />
                     {touched.fullName && errors.fullName && (
                       <p className="text-red-600 text-sm mt-1 font-montserrat font-normal">
@@ -260,7 +260,7 @@ export function Form() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       required
-                      className="w-full border-b font-montserrat border-brown-800 text-sm md:text-base bg-transparent py-2 focus:outline-none text-brown-800"
+                      className="w-full border-b rounded-none font-montserrat border-brown-800 text-sm md:text-base bg-transparent py-2 focus:outline-none text-brown-800"
                     />
                     {touched.email && errors.email && (
                       <p className="text-red-600 text-sm font-montserrat font-normal mt-1">
@@ -272,7 +272,7 @@ export function Form() {
                   <div>
                     <label
                       htmlFor="amount"
-                      className="block text-brown-800 font-montserrat text-sm md:text-base font-normal leading-6"
+                      className="block text-brown-800  font-montserrat text-sm md:text-base font-normal leading-6"
                     >
                       How many will you be?
                     </label>
@@ -283,7 +283,7 @@ export function Form() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       type="number"
-                      className="w-full border-b font-montserrat border-brown-800 bg-transparent text-sm md:text-base py-2 focus:outline-none text-brown-800"
+                      className="w-full border-b rounded-none font-montserrat border-brown-800 bg-transparent text-sm md:text-base py-2 focus:outline-none text-brown-800"
                     />
                   </div>
 
@@ -300,7 +300,7 @@ export function Form() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={1}
-                      className="w-full border-b font-montserrat border-brown-800 text-sm md:text-base bg-transparent py-2 focus:outline-none text-brown-800 resize-none"
+                      className="w-full border-b rounded-none font-montserrat border-brown-800 text-sm md:text-base bg-transparent py-2 focus:outline-none text-brown-800 resize-none"
                     />
                   </div>
                 </div>
