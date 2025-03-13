@@ -77,7 +77,7 @@ export default function Loading({ onFinish }) {
 
       {/* Lời chào */}
       <div className="text-center mb-8 relative z-10">
-        <h1 className="font-bodoni font-bold text-[40px] leading-[48px] text-brown-800 text-3xl mb-2">
+        <h1 className="font-bodoni font-bold text-2xl md:text-[40px] leading-7 md:leading-[48px] text-brown-800 mb-2">
           Truong & Hien
         </h1>
         <p className="font-montserrat text-brown-800 text-sm">

@@ -125,32 +125,31 @@ export function Form() {
   };
 
   return (
-    <section id="rsvp" className="py-20 bg-[#FBF8EF]">
+    <section id="rsvp" className="py-10 md:py-20 bg-[#FBF8EF]">
       <FadeInSection>
-        <div className="container mx-auto px-4 max-w-5xl">
+        <div className="container mx-auto px-6 md:px-4 max-w-5xl">
           <div className="flex flex-col items-center gap-[60px]">
             <div className="flex flex-col items-center gap-7">
-              <div className="border-[1.4px] border-brown-800 rounded-sm px-5 py-[3px] w-fit">
-                <p className="font-montserrat text-base font-semibold text-brown-800 leading-5">
+              <div className="border md:border-[1.4px] border-brown-800 rounded-sm px-5 py-[3px] w-fit">
+                <p className="font-montserrat text-sm md:text-base font-semibold text-brown-800 leading-5">
                   Join Us for the Big Day!
                 </p>
               </div>
 
-              <h2 className="font-bodoni text-[40px] leading-[48px] font-bold text-brown-800">
+              <h2 className="font-bodoni text-2xl text-[40px] leading-7 md:leading-[48px] font-bold text-brown-800">
                 RSVP NOW
               </h2>
 
-              <p className="text-brown-800 text-center max-w-2xl font-montserrat leading-relaxed text-base font-normal">
+              <p className="text-brown-800 text-center max-w-xl font-montserrat leading-relaxed text-sm md:text-base font-normal">
                 We cannot wait to celebrate with you! Be a part of our love
-                story as <br />
-                we step into the next chapter. RSVP by <b>April 30, 2025</b> to
-                confirm <br />
-                your attendance and help us plan for the best day ever.
+                story as we step into the next chapter. RSVP by{" "}
+                <b>April 30, 2025</b> to confirm your attendance and help us
+                plan for the best day ever.
               </p>
             </div>
 
             {submitted ? (
-              <div className="text-center p-8 border border-brown-800 rounded w-full">
+              <div className="text-center p-10 md:p-8 border border-brown-800 rounded w-full">
                 <h3 className="text-2xl font-bodoni font-semibold text-brown-800 mb-4">
                   Thank You!
                 </h3>
@@ -162,16 +161,16 @@ export function Form() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                className="w-full border border-brown-800 p-8 md:p-[60px]"
+                className="w-full border border-brown-800 p-10 md:p-[60px]"
               >
                 <div className="mb-7">
-                  <p className="text-brown-800 mb-6 text-center font-montserrat text-base font-normal leading-6">
+                  <p className="text-brown-800 mb-4 md:mb-6 text-center font-montserrat text-sm md:text-base font-normal leading-6">
                     Are you attending? <span className="text-brown-800">*</span>
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-28 mb-[60px]">
-                  <label className="flex items-center gap-2 cursor-pointer justify-end">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-y-12 gap-x-28 mb-8 md:mb-[60px]">
+                  <label className="flex items-center gap-2 cursor-pointer justify-start md:justify-end">
                     <div className="relative">
                       <input
                         type="radio"
@@ -192,7 +191,7 @@ export function Form() {
                         )}
                       </div>
                     </div>
-                    <span className="text-brown-800 font-montserrat text-base font-normal leading-6">
+                    <span className="text-brown-800 font-montserrat text-sm md:text-base font-normal leading-6">
                       Yes, I&apos;ll be there
                     </span>
                   </label>
@@ -218,14 +217,14 @@ export function Form() {
                         )}
                       </div>
                     </div>
-                    <span className="text-brown-800 font-montserrat text-base font-normal leading-6">
+                    <span className="text-brown-800 font-montserrat text-sm md:text-base font-normal leading-6">
                       Sadly, I can&apos;t go
                     </span>
                   </label>
                   <div>
                     <label
                       htmlFor="fullName"
-                      className="block text-brown-800 font-montserrat text-base font-normal leading-6"
+                      className="block text-brown-800 font-montserrat text-sm md:text-base font-normal leading-6"
                     >
                       Full name <span className="text-brown-800">*</span>
                     </label>
@@ -237,7 +236,7 @@ export function Form() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       required
-                      className="w-full border-b font-montserrat border-brown-800 bg-transparent py-2 focus:outline-none text-brown-800"
+                      className="w-full border-b font-montserrat border-brown-800 text-sm md:text-base bg-transparent py-2 focus:outline-none text-brown-800"
                     />
                     {touched.fullName && errors.fullName && (
                       <p className="text-red-600 text-sm mt-1 font-montserrat font-normal">
@@ -249,7 +248,7 @@ export function Form() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-brown-800 font-montserrat text-base font-normal leading-6"
+                      className="block text-brown-800 font-montserrat text-sm md:text-base font-normal leading-6"
                     >
                       Email <span className="text-brown-800">*</span>
                     </label>
@@ -261,7 +260,7 @@ export function Form() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       required
-                      className="w-full border-b font-montserrat border-brown-800 bg-transparent py-2 focus:outline-none text-brown-800"
+                      className="w-full border-b font-montserrat border-brown-800 text-sm md:text-base bg-transparent py-2 focus:outline-none text-brown-800"
                     />
                     {touched.email && errors.email && (
                       <p className="text-red-600 text-sm font-montserrat font-normal mt-1">
@@ -273,7 +272,7 @@ export function Form() {
                   <div>
                     <label
                       htmlFor="amount"
-                      className="block text-brown-800 font-montserrat text-base font-normal leading-6"
+                      className="block text-brown-800 font-montserrat text-sm md:text-base font-normal leading-6"
                     >
                       How many will you be?
                     </label>
@@ -284,14 +283,14 @@ export function Form() {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       type="number"
-                      className="w-full border-b font-montserrat border-brown-800 bg-transparent py-2 focus:outline-none text-brown-800"
+                      className="w-full border-b font-montserrat border-brown-800 bg-transparent text-sm md:text-base py-2 focus:outline-none text-brown-800"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-brown-800 font-montserrat text-base font-normal leading-6"
+                      className="block text-brown-800 font-montserrat text-sm md:text-base font-normal leading-6"
                     >
                       Leave us a message...
                     </label>
@@ -301,7 +300,7 @@ export function Form() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={1}
-                      className="w-full border-b font-montserrat border-brown-800 bg-transparent py-2 focus:outline-none text-brown-800 resize-none"
+                      className="w-full border-b font-montserrat border-brown-800 text-sm md:text-base bg-transparent py-2 focus:outline-none text-brown-800 resize-none"
                     />
                   </div>
                 </div>
@@ -310,7 +309,7 @@ export function Form() {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className={`bg-brown-800 text-white px-5 py-2 rounded-sm font-montserrat text-base font-semibold leading-6 transition-colors duration-300 ${
+                    className={`bg-brown-800 text-white px-5 py-2 rounded-md font-montserrat text-sm md:text-base font-semibold leading-6 transition-colors duration-300 ${
                       isLoading
                         ? "bg-brown-400 cursor-not-allowed"
                         : "hover:bg-[#7a5d45]"

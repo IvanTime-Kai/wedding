@@ -77,30 +77,41 @@ export function Gallery() {
   }, [autoplay]);
 
   return (
-    <section id="gallery" className="relative min-h-screen py-20">
+    <section
+      id="gallery"
+      className="relative h-[calc(100vh+100px)] py-10 md:min-h-screen md:py-20"
+    >
       <Image
         src="https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747757/bg-gallery_uqth9i.png"
         alt="Truong and Hien Wedding"
         fill
-        className="object-fill"
+        className="object-cover hidden md:block"
+        priority
+      />
+
+      <Image
+        src="https://res.cloudinary.com/dhjjtwvws/image/upload/v1741879335/bg-mobile_tc03sd.png"
+        alt="Truong and Hien Wedding"
+        fill
+        className="object-cover block md:hidden"
         priority
       />
 
       <div className="absolute inset-0 flex flex-col gap-7 items-center justify-center text-center text-white ">
         <FadeInSection>
-          <div className="container mx-auto px-4 flex flex-col items-center gap-10">
+          <div className="container mx-auto px-6 md:px-4 flex flex-col items-center gap-10">
             <div className="text-center flex flex-col gap-7 items-center">
-              <div className="border-[1.4px] border-brown-800 rounded-sm px-5 py-[3px] w-fit ">
-                <p className="font-montserrat text-base font-semibold text-brown-800 leading-5">
+              <div className="border md:border-[1.4px] border-brown-800 rounded-sm px-5 py-[3px] w-fit ">
+                <p className="font-montserrat text-xs md:text-base font-semibold text-brown-800 leading-5">
                   Our Precious Moments
                 </p>
               </div>
-              <h2 className="font-bodoni text-[40px] leading-[48px] font-bold text-brown-800 ">
+              <h2 className="font-bodoni text-2xl md:text-[40px] leading-7 md:leading-[48px] font-bold text-brown-800 ">
                 Relive the Joyous Chapters
                 <br />
                 of Our Journey
               </h2>
-              <p className="font-montserrat text-brown-800 mx-auto text-base font-normal leading-[20px]">
+              <p className="font-montserrat text-brown-800 mx-auto text-sm md:text-base font-normal leading-[20px]">
                 Discover the cherished memories and highlights from our
                 unforgettable moments together.
               </p>
@@ -114,7 +125,7 @@ export function Gallery() {
                     { length: Math.ceil(galleryImages.length / 6) },
                     (_, index) => (
                       <div key={index} className="flex-[0_0_100%]">
-                        <div className="grid grid-cols-3 grid-rows-2 gap-6">
+                        <div className="grid grid-cols-2 md:grid-cols-3 grid-rows-2 gap-6">
                           {galleryImages
                             .slice(index * 6, index * 6 + 6)
                             .map((image, imgIndex) => (
