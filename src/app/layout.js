@@ -21,17 +21,9 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-export const metadata = {
-  title: "Truong & Hien Wedding",
-  description: "Join us in celebrating our special day",
-  image:
-    "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741757231/18_tkyzj0.png",
-  url: "https://truonghienwedding.com",
-};
-
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning translate="no">
+    <html lang="en">
       <head>
         {/* Favicon cho các trình duyệt hiện đại */}
         <link rel="icon" href="/tandh.svg" type="image/svg+xml" />
@@ -42,22 +34,8 @@ export default function RootLayout({ children }) {
         {/* Optional: thêm kích thước khác cho Apple */}
         <link rel="apple-touch-icon" href="/tandh.svg" sizes="152x152" />
         <link rel="apple-touch-icon" href="/tandh.svg" sizes="167x167" />
-
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <meta property="og:image" content={metadata.image} />
-        <meta property="og:url" content={metadata.url} />
-        <meta property="og:type" content="website" />
-
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metadata.title} />
-        <meta name="twitter:description" content={metadata.description} />
-        <meta name="twitter:image" content={metadata.image} />
       </head>
       <body
-        suppressContentEditableWarning
         className={`${montserrat.variable} ${bodoni.variable} ${beloved.variable} antialiased`}
       >
         {children}
