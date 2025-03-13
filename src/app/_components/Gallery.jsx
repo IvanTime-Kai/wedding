@@ -79,7 +79,7 @@ export function Gallery() {
   return (
     <section
       id="gallery"
-      className="relative h-[calc(100vh+100px)] py-10 md:min-h-screen md:py-20"
+      className="relative h-[calc(100vh+20px)] py-10 md:min-h-screen md:py-20"
     >
       <Image
         src="https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747757/bg-gallery_uqth9i.png"
@@ -158,7 +158,7 @@ export function Gallery() {
                   <button
                     key={index}
                     onClick={() => scrollTo(index)}
-                    className={`w-3 h-3 rounded-full ${
+                    className={`h-2 w-2 md:w-3 md:h-3 rounded-full ${
                       index === selectedIndex ? "bg-brown-800" : "bg-brown-500"
                     } transition-all`}
                   />

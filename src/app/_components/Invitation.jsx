@@ -66,7 +66,7 @@ const Invitation = () => {
             </div>
           </div>
 
-          <div className="flex md:grid grid-cols-3 gap-6 max-w-4xl mx-auto w-full mt-10 md:mt-[60px] overflow-hidden md:overflow-auto hide-scrollbar">
+          <div className="flex md:grid grid-cols-3 gap-6 max-w-4xl mx-auto w-full mt-10 md:mt-[60px] overflow-hidden overflow-x-auto md:overflow-auto hide-scrollbar">
             {[
               "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747740/wedding-1_mqzpk8.png",
               "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741747740/wedding-2_j4vjko.png",
