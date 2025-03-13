@@ -25,7 +25,7 @@ export const metadata = {
   title: "Truong & Hien Wedding",
   description: "Join us in celebrating our special day",
   image:
-    "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741757231/18_tkyzj0.png", // Thumbnail image,
+    "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741757231/18_tkyzj0.png",
   url: "https://truonghienwedding.com",
 };
 
@@ -33,7 +33,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning translate="no">
       <head>
+        {/* Favicon cho các trình duyệt hiện đại */}
         <link rel="icon" href="/tandh.svg" type="image/svg+xml" />
+        {/* Fallback cho Safari và trình duyệt cũ */}
+        <link rel="icon" href="/tandh.svg" type="image/png" sizes="32x32" />
+        {/* Apple Touch Icon cho iOS/macOS */}
+        <link rel="apple-touch-icon" href="/tandh.svg" sizes="180x180" />
+        {/* Optional: thêm kích thước khác cho Apple */}
+        <link rel="apple-touch-icon" href="/tandh.svg" sizes="152x152" />
+        <link rel="apple-touch-icon" href="/tandh.svg" sizes="167x167" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content={metadata.title} />
