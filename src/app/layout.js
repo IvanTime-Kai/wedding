@@ -21,40 +21,43 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-export const metadata = {
-  title: "Truong & Hien Wedding",
-  description: "Join us in celebrating our special day",
-  image:
-    "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741757231/18_tkyzj0.png",
-  url: "https://truongandhienwedding.com",
-};
+export async function generateMetadata() {
+  const title = "Truong & Hien Wedding";
+  const description = "Join us in celebrating our special day";
+  const image =
+    "https://res.cloudinary.com/dhjjtwvws/image/upload/v1741757231/18_tkyzj0.png";
+  const url = "https://truongandhienwedding.com";
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [{ url: image }],
+      url,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
+    icons: {
+      icon: "/tandh.svg",
+      apple: [
+        { url: "/tandh.svg", sizes: "180x180" },
+        { url: "/tandh.svg", sizes: "152x152" },
+        { url: "/tandh.svg", sizes: "167x167" },
+      ],
+    },
+  };
+}
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/tandh.svg" type="image/svg+xml" />
-        {/* Fallback cho Safari và trình duyệt cũ */}
-        <link rel="icon" href="/tandh.svg" type="image/png" sizes="32x32" />
-        {/* Apple Touch Icon cho iOS/macOS */}
-        <link rel="apple-touch-icon" href="/tandh.svg" sizes="180x180" />
-        {/* Optional: thêm kích thước khác cho Apple */}
-        <link rel="apple-touch-icon" href="/tandh.svg" sizes="152x152" />
-        <link rel="apple-touch-icon" href="/tandh.svg" sizes="167x167" />
-
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <meta property="og:image" content={metadata.image} />
-        <meta property="og:url" content={metadata.url} />
-        <meta property="og:type" content="website" />
-
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metadata.title} />
-        <meta name="twitter:description" content={metadata.description} />
-        <meta name="twitter:image" content={metadata.image} />
-      </head>
       <body
         className={`${montserrat.variable} ${bodoni.variable} ${beloved.variable} antialiased`}
       >

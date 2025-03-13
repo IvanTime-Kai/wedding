@@ -136,7 +136,7 @@ export function Form() {
                 </p>
               </div>
 
-              <h2 className="font-bodoni text-2xl text-[40px] leading-7 md:leading-[48px] font-bold text-brown-800">
+              <h2 className="font-bodoni text-2xl md:text-[40px] leading-7 md:leading-[48px] font-bold text-brown-800">
                 RSVP NOW
               </h2>
 

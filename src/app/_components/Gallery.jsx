@@ -63,7 +63,7 @@ export function Gallery() {
     (index) => {
       if (emblaApi) emblaApi.scrollTo(index);
     },
-    [emblaApi],
+    [emblaApi]
   );
 
   const autoplay = useCallback(() => {
@@ -88,7 +88,7 @@ export function Gallery() {
         className="object-cover hidden md:block"
         priority
       />
-
+      
       <Image
         src="https://res.cloudinary.com/dhjjtwvws/image/upload/v1741879335/bg-mobile_tc03sd.png"
         alt="Truong and Hien Wedding"
@@ -100,7 +100,7 @@ export function Gallery() {
       <div className="absolute inset-0 flex flex-col gap-7 items-center justify-center text-center text-white ">
         <FadeInSection>
           <div className="container mx-auto px-6 md:px-4 flex flex-col items-center gap-10">
-            <div className="text-center flex flex-col gap-7 items-center">
+            <div className="text-center flex flex-col gap-4 md:gap-7 items-center">
               <div className="border md:border-[1.4px] border-brown-800 rounded-sm px-5 py-[3px] w-fit ">
                 <p className="font-montserrat text-xs md:text-base font-semibold text-brown-800 leading-5">
                   Our Precious Moments
@@ -147,7 +147,7 @@ export function Gallery() {
                             ))}
                         </div>
                       </div>
-                    ),
+                    )
                   )}
                 </div>
               </div>
