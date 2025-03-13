@@ -55,13 +55,13 @@ export function Hero() {
           </p>
           <div className="flex flex-row gap-6 items-center">
             <button
-              className="px-5 md:px-8 py-2 border-[1.4px] border-white font-montserrat hover:bg-white hover:text-brown-800 transition-colors rounded-sm text-xs md:text-base font-medium"
+              className="px-5 w-[100px] md:w-[120px] md:px-8 py-2 border-[1.4px] border-white font-montserrat hover:bg-white hover:text-brown-800 transition-colors rounded-sm text-xs md:text-base font-medium"
               onClick={(e) => handleNavClick(e, "rsvp")}
             >
               RSVP
             </button>
             <button
-              className="px-5 md:px-8 py-2 border-[1.4px] border-white font-montserrat hover:bg-white hover:text-brown-800 transition-colors rounded-sm text-xs md:text-base font-medium"
+              className="px-5 w-[100px] md:w-[120px] md:px-8 py-2 border-[1.4px] border-white font-montserrat hover:bg-white hover:text-brown-800 transition-colors rounded-sm text-xs md:text-base font-medium"
               onClick={(e) => handleNavClick(e, "detail")}
             >
               DETAIL
