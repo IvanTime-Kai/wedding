@@ -31,8 +31,8 @@ export function Schedule() {
         <div className="container mx-auto px-6 md:px-4 flex flex-col md:grid grid-cols-12 gap-5 md:gap-8">
           <div className="flex flex-col gap-[60px] items-center col-span-12 md:col-span-8">
             <div className="flex flex-col items-center justify-center gap-4 md:gap-7">
-              <div className="border-[1.4px] border-brown-800 rounded-sm px-5 py-[3px] w-fit ">
-                <p className="font-montserrat test-xs md:text-base font-semibold text-brown-800 leading-5">
+              <div className="border md:border-[1.4px] border-brown-800 rounded-sm px-5 py-[3px] w-fit ">
+                <p className="font-montserrat text-xs md:text-base font-semibold text-brown-800 leading-5">
                   Wedding Details
                 </p>
               </div>
