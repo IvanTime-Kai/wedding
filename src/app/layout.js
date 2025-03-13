@@ -31,6 +31,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="/tandh.svg" type="image/svg+xml" />
+        {/* Fallback cho Safari và trình duyệt cũ */}
+        <link rel="icon" href="/tandh.svg" type="image/png" sizes="32x32" />
+        {/* Apple Touch Icon cho iOS/macOS */}
+        <link rel="apple-touch-icon" href="/tandh.svg" sizes="180x180" />
+        {/* Optional: thêm kích thước khác cho Apple */}
+        <link rel="apple-touch-icon" href="/tandh.svg" sizes="152x152" />
+        <link rel="apple-touch-icon" href="/tandh.svg" sizes="167x167" />
       </head>
       <body
         className={`${montserrat.variable} ${bodoni.variable} ${beloved.variable} antialiased`}
