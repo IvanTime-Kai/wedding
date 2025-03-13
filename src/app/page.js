@@ -10,8 +10,6 @@ import Invitation from "./_components/Invitation";
 import { Schedule } from "./_components/Schedule";
 import Loading from "./_components/Loading";
 
-export const dynamic = "force-static";
-
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
