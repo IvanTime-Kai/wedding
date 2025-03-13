@@ -63,7 +63,7 @@ export function Gallery() {
     (index) => {
       if (emblaApi) emblaApi.scrollTo(index);
     },
-    [emblaApi]
+    [emblaApi],
   );
 
   const autoplay = useCallback(() => {
@@ -88,7 +88,6 @@ export function Gallery() {
         className="object-cover hidden md:block"
         priority
       />
-      
       <Image
         src="https://res.cloudinary.com/dhjjtwvws/image/upload/v1741879335/bg-mobile_tc03sd.png"
         alt="Truong and Hien Wedding"
@@ -147,7 +146,7 @@ export function Gallery() {
                             ))}
                         </div>
                       </div>
-                    )
+                    ),
                   )}
                 </div>
               </div>
