@@ -51,6 +51,10 @@ export async function generateMetadata() {
         { url: "/tandh.svg", sizes: "152x152" },
         { url: "/tandh.svg", sizes: "167x167" },
       ],
+      mask: {
+        url: "/tandh.svg",
+        color: "transparent",
+      },
     },
   };
 }
@@ -58,6 +62,9 @@ export async function generateMetadata() {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="mask-icon" href="/tandh.svg" color="transparent" />
+      </head>
       <body
         className={`${montserrat.variable} ${bodoni.variable} ${beloved.variable} antialiased`}
       >
