@@ -45,16 +45,9 @@ export async function generateMetadata() {
       images: [image],
     },
     icons: {
-      icon: "/tandh.svg",
-      apple: [
-        { url: "/tandh.svg", sizes: "180x180" },
-        { url: "/tandh.svg", sizes: "152x152" },
-        { url: "/tandh.svg", sizes: "167x167" },
-      ],
-      mask: {
-        url: "/tandh.svg",
-        color: "transparent",
-      },
+      icon: "/favicon.ico", // Standard favicon
+      apple: "/apple-touch-icon.png", // Apple icon (180x180 PNG)
+      shortcut: "/favicon.ico",
     },
   };
 }
@@ -63,7 +56,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="mask-icon" href="/tandh.svg" color="transparent" />
+        {/* Favicons */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/tandh.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+        {/* Mask Icon for Safari */}
+        <link rel="mask-icon" href="/tandh.svg" color="#000000" />
       </head>
       <body
         className={`${montserrat.variable} ${bodoni.variable} ${beloved.variable} antialiased`}
